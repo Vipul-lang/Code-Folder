@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="#">
+            <input type="text" name="fname">
+            <button>save</button> 
+            <!-- A <button> inside a <form> has a default type="submit", which causes the form to submit when clicked. -->
+
+            <!-- Preventing Form Submission     -->
+            <!-- Add type="button" to the button. -->
+            <button type="button">save</button>  <!-- Stops form submission -->
+
+        </form>
+
+
+        <form>
+            <input type="text" name="fname">
+            <button>Save</button>
+        </form>
+        
+        <script>
+            document.querySelector('form').addEventListener('submit', function (event) {
+                //Preventing Form Submission
+                // Use JavaScript with event.preventDefault().
+                event.preventDefault(); // Stops form submission
+                alert('Form submission prevented!');
+            });
+        </script>
+
+    <!-- Prevent submission       -->
+    <!-- Use type="button" or event.preventDefault(). -->
+        
+</body>
+</html>
